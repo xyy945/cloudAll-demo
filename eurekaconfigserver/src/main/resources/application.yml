@@ -6,6 +6,9 @@ spring:
   profiles:
     active: dev
   cloud:
+    bus:
+      trace:
+        enabled: true
     config:
       server:
         git:
