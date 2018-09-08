@@ -9,7 +9,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/xyy945/springCloudAll-demo.git #配置git仓库地址
+          uri: https://github.com/xyy945/cloudAll-demo.git #配置git仓库地址
           searchPaths: testConfig #配置仓库路径
           username: xyy945 #访问git仓库的用户名
           password: cwj_echo_945 #访问git仓库的用户密码
