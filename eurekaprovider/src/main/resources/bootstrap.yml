@@ -17,11 +17,11 @@ spring:
     username: guest
     password: guest
 server:
-  port: 9764
+  port: 7764
 eureka:
   instance:
     hostname: ${spring.cloud.client.ipAddress}
     instanceId: ${spring.cloud.client.ipAddress}:${server.port}
   client:
     serviceUrl:
-      defaultZone: http://localhost:9761/eureka/
+      defaultZone: http://localhost:7761/eureka/
