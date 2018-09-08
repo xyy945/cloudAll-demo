@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: eurekaprovider
+  profiles:
+    active: dev
+  cloud:
+    config:
+      profile: dev #指定配置环境，配置文件如果是多环境则取名类似：config-dev.yml
+      name: eurekaprovider #指定配置文件名字（多个配置文件以英文逗号隔开）
+      label: master #git仓库分支名
+      discovery:
+        enabled: true
+        serviceId: config #连接的配置中心名字（applicaiton.name）
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+server:
+  port: 9764
+eureka:
+  instance:
+    hostname: ${spring.cloud.client.ipAddress}
+    instanceId: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9761/eureka/
