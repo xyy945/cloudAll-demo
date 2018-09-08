@@ -14,6 +14,11 @@ spring:
           username: xyy945 #访问git仓库的用户名
           password: cwj_echo_945 #访问git仓库的用户密码
       label: master #配置仓库的分支
+  rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
 eureka:
   instance:
     hostname: ${spring.cloud.client.ipAddress}
